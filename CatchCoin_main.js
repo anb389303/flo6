@@ -263,25 +263,10 @@ playGame.prototype = {
 
     // now it's game over
     this.isGameOver = true;
-if(gameOver){
-          if(!topscoreSent){
-/*
-            // get address from User Input
-            var address = prompt("Please enter your ETH address", "");
-            if(address == null || address == ""){
-              alert("User cancelled the prompt");
-            }
-            else{
-              mintAfterGame(address, score);
-            }
-*/
-            //get address from Metamask
+
             mintAfterGame(score);
 
-            topScoreSent = true;
-          }
-          return;
-        };    
+              
     // updating top score in local storage
     localStorage.setItem(gameOptions.localStorageName, Math.max(this.score, this.topScore));
 
